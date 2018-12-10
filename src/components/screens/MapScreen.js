@@ -1,18 +1,9 @@
-import React from 'react';
-import { StyleSheet, Text, SafeAreaView } from 'react-native'
-import { Location, Permissions } from 'expo'
-import { DrawerNavigator } from 'react-navigation'
-
-import Map from './src/components/Map'
-// import REGION LOCATIONS DELTAS from './src/data/data.js'
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
+import Map from '../Map';
 
 
-const deltas = {
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421
-}
-
-export default class App extends React.Component {
+class MapScreen extends React.Component {
 
     state = {
         region: {
@@ -53,17 +44,15 @@ export default class App extends React.Component {
     render() {
         const { region, locations } = this.state
         return (
-            <SafeAreaView style={styles.container}>
-                <Text>Welcome to Earth Bandit!</Text>
-                <Map
-                    region={region}
-                    locations={locations}
-                >
-                </Map>
-            </SafeAreaView>
-        );
+            <View style={styles.container}>
+                <Text>Explore Map!</Text>
+               <Map region={region} locations={locations}/>
+           </View>
+        )
     }
 }
+
+export default MapScreen
 
 const styles = StyleSheet.create({
     container: {
@@ -72,4 +61,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-});
+})

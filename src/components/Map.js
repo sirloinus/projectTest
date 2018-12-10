@@ -12,7 +12,7 @@ class Map extends React.Component {
                 key={location.id} 
                 title={location.name} 
                 coordinate={location.coords} 
-                image={require('../assets/images/lockclosed.png')}
+                image={require('../../assets/images/lockclosed.png')}
             />
         ))
     }
