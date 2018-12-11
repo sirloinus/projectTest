@@ -15,7 +15,7 @@ class NavigationDrawerStructure extends React.Component {
 
                     <Image
                         source={require('../../../assets/images/home.png')}
-                        style={{ width: 25, height: 25, marginLeft: 5 }}
+                        style={{ width: 50, height: 50, marginLeft: 5 }}
                     />
                 </TouchableOpacity>
             </View>

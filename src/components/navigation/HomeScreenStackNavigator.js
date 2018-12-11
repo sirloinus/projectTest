@@ -1,19 +1,17 @@
 import React from 'react'
-// import { createStackNavigator } from 'react-native'
-import { StackNavigator } from 'react-native'
+import { createStackNavigator } from 'react-navigation'
 
 import HomeScreen from '../screens/HomeScreen'
 import NavigationDrawerStructure from './NavigationDrawerStructure'
 
-
-const HomeScreenStackNavigator = StackNavigator({
+const HomeScreenStackNavigator = createStackNavigator({
     First: {
         screen: HomeScreen,
         navigationOptions: ({ navigation }) => ({
             title: 'Home',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
-                backgroundColor: '#FF9800',
+                backgroundColor: 'rgb(183, 232, 196)',
             },
             headerTintColor: '#fff',
         })

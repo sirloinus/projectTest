@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import Map from '../Map';
 
+import Map from '../Map';
 
 class MapScreen extends React.Component {
 

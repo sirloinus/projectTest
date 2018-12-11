@@ -1,10 +1,9 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { createDrawerNavigator, createAppContainer } from 'react-navigation'
-import HomeScreen from './src/components/screens/HomeScreen'
-import MapScreen from './src/components/screens/MapScreen'
+
 import HomeScreenStackNavigator from './src/components/navigation/HomeScreenStackNavigator'
-import MapScreenNavigator from './src/components/navigation/MapScreenNavigator'
+import MapScreenStackNavigator from './src/components/navigation/MapScreenStackNavigator'
 
 
 class App extends React.Component {
@@ -16,11 +15,11 @@ class App extends React.Component {
 }
 
 const DrawerNavigator = createDrawerNavigator ({
-  HomeScreen: {
+  Home: {
     screen: HomeScreenStackNavigator
   },
-  MapScreen: {
-    screen: MapScreenNavigator
+  Map: {
+    screen: MapScreenStackNavigator
   }
 })
 
@@ -35,4 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
+  drawer: {
+    backgroundColor: 'rgb(183, 232, 196)'
+  }
 })

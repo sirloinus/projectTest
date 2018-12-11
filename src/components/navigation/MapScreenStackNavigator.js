@@ -1,19 +1,17 @@
 import React from 'react'
-// import { createStackNavigator } from 'react-native'
-import { StackNavigator } from 'react-native'
+import { createStackNavigator } from 'react-navigation'
 
 import MapScreen from '../screens/MapScreen'
 import NavigationDrawerStructure from './NavigationDrawerStructure'
 
-
-const MapScreenStackNavigator = StackNavigator({
+const MapScreenStackNavigator = createStackNavigator({
     Second: {
         screen: MapScreen,
         navigationOptions: ({ navigation }) => ({
             title: 'Map',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
-                backgroundColor: '#FF9800',
+                backgroundColor: 'rgb(183, 232, 196)',
             },
             headerTintColor: '#fff',
         })
