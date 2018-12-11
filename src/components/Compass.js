@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image, Animated, Easing, Dimensions } from 'react-native'
+import { Text, View, StyleSheet, Image, Animated, Easing, Dimensions, ImageBackground } from 'react-native'
 import { Location, Permissions } from 'expo'
 
 export default class Compass extends Component {
@@ -82,22 +82,24 @@ export default class Compass extends Component {
 
 
         return (
-            <View style={styles.container}>
-                <Text style={styles.text}>{display + '°'}</Text>
-                <View style={styles.imageContainer} >
-                    <Animated.Image resizeMode='contain' source={require('../../assets/images/sun.png')}
-                        style={{
-                            width: deviceWidth - 10, 
-                            height: deviceHeight / 2 - 10,
-                            left: deviceWidth / 2 - (deviceWidth - 10) / 1.05,     // change 1.05 value to move sun left/right
-                            top: deviceHeight / 2 - (deviceHeight / 2 - 10) / 2,
-                            transform: [{ rotate: spin }],
-                        }} />
+            <ImageBackground source={require('../../assets/images/samuel-ferrara-149242-unsplash.jpg')} style={styles.backgroundImage}>
+                <View style={styles.container}>
+                    <Text style={styles.text}>{display + '°'}</Text>
+                    <View style={styles.imageContainer} >
+                        <Animated.Image resizeMode='contain' source={require('../../assets/images/sun.png')}
+                            style={{
+                                width: deviceWidth - 10, 
+                                height: deviceHeight / 2 - 10,
+                                left: deviceWidth / 2 - (deviceWidth - 10) / 1.05,     // change 1.05 value to move sun left/right
+                                top: deviceHeight / 2 - (deviceHeight / 2 - 10) / 2,
+                                transform: [{ rotate: spin }],
+                            }} />
+                    </View>
+                    <View style={styles.arrowContainer} >
+                        <Image resizeMode='contain' source={require('../../assets/images/arrow.png')} style={styles.arrow} />
+                    </View>
                 </View>
-                <View style={styles.arrowContainer} >
-                    <Image resizeMode='contain' source={require('../../assets/images/arrow.png')} style={styles.arrow} />
-                </View>
-            </View>
+            </ImageBackground>
         );
     }
 }
@@ -112,8 +114,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        color: '#263544',
-        fontSize: 30,
+        color: 'rgb(254, 254, 254)',
+        fontSize: 50,
         transform: ([{ translateY: -(deviceHeight / 2 - (deviceHeight / 2 - 10) / 2) - 50 }])
     },
     imageContainer: {
@@ -128,5 +130,12 @@ const styles = StyleSheet.create({
         left: deviceWidth / 2 - (deviceWidth / 1.8),     // change 1.8 value to move arrow left/right
         top: deviceHeight / 2 - (deviceWidth / 5) / 2,
         opacity: 0.9
+    },
+    backgroundImage: {
+        flex: 1,
+        width: '100%',
+        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 })
