@@ -51,9 +51,6 @@ class MapScreen extends React.Component {
         const { region, locations } = this.state
         return (
             <View style={styles.container}>
-                <Text style={{ fontSize: 23 }}>
-                    Explore Map!
-                </Text>
                <Map region={region} locations={locations}/>
            </View>
         )

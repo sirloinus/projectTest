@@ -38,7 +38,7 @@ class Map extends React.Component {
     const styles = {
         container: {
             width: '100%',
-            height: '80%',
+            height: '100%',
         }
     }
 
