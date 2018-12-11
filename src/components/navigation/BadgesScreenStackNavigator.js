@@ -10,10 +10,11 @@ const BadgesScreenStackNavigator = createStackNavigator({
         navigationOptions: ({ navigation }) => ({
             title: 'Badges',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+            headerTransparent: true,
             headerStyle: {
-                backgroundColor: 'white',
+                // backgroundColor: 'white'
             },
-            headerTintColor: 'rgb(183, 232, 196)',
+            headerTintColor: '#fff',
         })
     }
 })
