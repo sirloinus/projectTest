@@ -5,7 +5,7 @@ class BadgesScreen extends React.Component {
 
     render() {
         return (
-            <ImageBackground source={require('../../../assets/images/ehud-neuhaus-162166-unsplash.jpg')} style={styles.backgroundImage}>
+            <ImageBackground source={require('../../../assets/images/claus-grunstaudl-664432-unsplash.jpg')} style={styles.backgroundImage}>
                 <View style={styles.container}>
                     <Text style={{ fontSize: 23, color: '#fff' }}>
                         BADGES SCREEN
