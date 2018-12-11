@@ -11,9 +11,9 @@ const HomeScreenStackNavigator = createStackNavigator({
             title: 'Home',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
-                backgroundColor: 'rgb(183, 232, 196)',
+                backgroundColor: 'white',
             },
-            headerTintColor: '#fff',
+            headerTintColor: 'rgb(183, 232, 196)',
         })
     }
 })

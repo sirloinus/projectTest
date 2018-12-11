@@ -22,13 +22,13 @@ const DrawerNavigator = createDrawerNavigator (
     Badges: { screen: BadgesScreenStackNavigator },
     Compass: { screen: CompassScreenStackNavigator }
   }, {
-    drawerBackgroundColor: 'rgb(183, 232, 196)',
+    drawerBackgroundColor: 'white',
     drawerWidth: 250,
     contentOptions: {
       activeTintColor: '#ffffff',
-      inactiveTintColor: 'rgb(92, 162, 111)',
+      inactiveTintColor: '#ffffff',
       activeBackgroundColor: 'rgb(92, 162, 111)',
-      inactiveBackgroundColor: '#ffffff',
+      inactiveBackgroundColor: 'rgb(183, 232, 196)',
       itemsContainerStyle: {
         marginTop: 38
       },
