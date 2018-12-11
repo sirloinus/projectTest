@@ -14,12 +14,27 @@ class App extends React.Component {
   }
 }
 
-const DrawerNavigator = createDrawerNavigator ({
-  Home: {
-    screen: HomeScreenStackNavigator
-  },
-  Map: {
-    screen: MapScreenStackNavigator
+const DrawerNavigator = createDrawerNavigator (
+  {
+    Home: { screen: HomeScreenStackNavigator },
+    Map: { screen: MapScreenStackNavigator }
+  }, {
+    drawerBackgroundColor: 'rgb(183, 232, 196)',
+    drawerWidth: 250,
+    contentOptions: {
+      activeTintColor: '#ffffff',
+      inactiveTintColor: 'rgb(92, 162, 111)',
+      activeBackgroundColor: 'rgb(92, 162, 111)',
+      inactiveBackgroundColor: '#ffffff',
+      itemsContainerStyle: {
+        marginTop: 38
+      },
+      itemStyle: {
+        marginTop: 0
+      },
+      labelStyle: {
+        fontSize: 14,
+      }
   }
 })
 
@@ -33,8 +48,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff',
-  },
-  drawer: {
-    backgroundColor: 'rgb(183, 232, 196)'
   }
 })

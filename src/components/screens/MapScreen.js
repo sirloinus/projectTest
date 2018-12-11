@@ -1,7 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-import Map from '../Map';
+import Map from '../Map'
+// import REGION LOCATIONS DELTAS from './src/data/data.js'
+
+// const deltas = {
+//     latitudeDelta: 0.0922,
+//     longitudeDelta: 0.0421
+// }
 
 class MapScreen extends React.Component {
 
