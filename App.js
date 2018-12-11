@@ -5,7 +5,7 @@ import { createDrawerNavigator, createAppContainer } from 'react-navigation'
 import HomeScreenStackNavigator from './src/components/navigation/HomeScreenStackNavigator'
 import MapScreenStackNavigator from './src/components/navigation/MapScreenStackNavigator'
 import BadgesScreenStackNavigator from './src/components/navigation/BadgesScreenStackNavigator';
-import CompassSCreenNavigator from './src/components/navigation/CompassScreenStackNavigator'
+import CompassScreenStackNavigator from './src/components/navigation/CompassScreenStackNavigator'
 
 class App extends React.Component {
   render() {
@@ -20,7 +20,7 @@ const DrawerNavigator = createDrawerNavigator (
     Home: { screen: HomeScreenStackNavigator },
     Map: { screen: MapScreenStackNavigator },
     Badges: { screen: BadgesScreenStackNavigator },
-    Compass: { screen: CompassSCreenNavigator }
+    Compass: { screen: CompassScreenStackNavigator }
   }, {
     drawerBackgroundColor: 'rgb(183, 232, 196)',
     drawerWidth: 250,

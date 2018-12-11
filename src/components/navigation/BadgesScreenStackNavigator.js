@@ -8,7 +8,7 @@ const BadgesScreenStackNavigator = createStackNavigator({
     Second: {
         screen: BadgesScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Map',
+            title: 'Badges',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
                 backgroundColor: 'rgb(183, 232, 196)',

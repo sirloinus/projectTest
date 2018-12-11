@@ -4,11 +4,11 @@ import { createStackNavigator } from 'react-navigation'
 import CompassScreen from '../screens/CompassScreen'
 import NavigationDrawerStructure from './NavigationDrawerStructure'
 
-const MapScreenStackNavigator = createStackNavigator({
+const CompassScreenStackNavigator = createStackNavigator({
     Fourth: {
         screen: CompassScreen,
         navigationOptions: ({ navigation }) => ({
-            title: 'Map',
+            title: 'Compass',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
                 backgroundColor: 'rgb(183, 232, 196)',
@@ -18,4 +18,4 @@ const MapScreenStackNavigator = createStackNavigator({
     }
 })
 
-export default MapScreenStackNavigator
+export default CompassScreenStackNavigator
