@@ -87,8 +87,10 @@ export default class Compass extends Component {
                 <View style={styles.imageContainer} >
                     <Animated.Image resizeMode='contain' source={require('../../assets/images/sun.png')}
                         style={{
-                            width: deviceWidth - 10, height: deviceHeight / 2 - 10,
-                            left: deviceWidth / 2 - (deviceWidth - 10) / 2, top: deviceHeight / 2 - (deviceHeight / 2 - 10) / 2,
+                            width: deviceWidth - 10, 
+                            height: deviceHeight / 2 - 10,
+                            left: deviceWidth / 2 - (deviceWidth - 10) / 1.05,     // change 1.05 value to move sun left/right
+                            top: deviceHeight / 2 - (deviceHeight / 2 - 10) / 2,
                             transform: [{ rotate: spin }],
                         }} />
                 </View>
@@ -121,10 +123,10 @@ const styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
     arrow: {
-        width: deviceWidth / 7,
-        height: deviceWidth / 7,
-        left: deviceWidth / 2 - (deviceWidth / 7) / 2,
-        top: deviceHeight / 2 - (deviceWidth / 7) / 2,
+        width: deviceWidth / 5,
+        height: deviceWidth / 5,
+        left: deviceWidth / 2 - (deviceWidth / 1.8),     // change 1.8 value to move arrow left/right
+        top: deviceHeight / 2 - (deviceWidth / 5) / 2,
         opacity: 0.9
     }
 })

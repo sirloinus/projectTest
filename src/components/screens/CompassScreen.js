@@ -8,9 +8,6 @@ class CompassScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={{ fontSize: 23 }}>
-                    COMPASS SCREEN
-                </Text>
                 <Compass/>
             </View>
         )
